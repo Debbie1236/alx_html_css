@@ -1,132 +1,95 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+/* WHAT WE DO SECTION OF THE WEBSITE */
+
+.what-we-do {
+    margin: 50px 0;
+    padding: 50px 0;
 }
 
-/* This part is for the hero section it is saved under 1-style.css */
-
-.hero {
-    background: url(/headphones/images/background.png) no-repeat center center/cover;
-    height: 800px;
-    width: 100%;
-}
-
-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 200px;
-    padding-right: 200px;
-}
-
-.nav_links ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav_links ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-}
-
-.logo {
-    width: 161px;
-    height: 32px;
-}
-
-button {
-    background-color: #FF6565;
-    border: none;
-    padding: 10px;
-    border-radius: 30px;
-    color: white;
-    font-size: 14px;
-    width: 162px;
-    height: 44px;
-    font-weight: bold;
-    margin-top: 40px;
-    margin-bottom: 80px;
-}
-
-.hero_section {
-    width: 637px;
-    height: 313px;
+.textarea-wwd {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: white;
-    margin: auto;
-    margin-top: 350px;
-    margin-bottom: 50px;
-
+    justify-content: center;
 }
 
-.hero_section p {
-    text-align: center;
-}
-
-.hero_section h3 {
-    font-size: 16px;
-}
-
-.hero_section h1 {
+.textarea-wwd h1{
     font-size: 32px;
+    color: var(--primary-text-color);
 }
 
-/* This part is for the "What we do" section */
+.textarea-wwd blockquote {
+    color: var(--primary-text-color);
+    margin: 40px 0;
+}
 
-.text_section {
+.media-area {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.down{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.frequency, .media, .audio, .hear {
+    display: flex;
     flex-direction: column;
-    width: 637px;
-    height: 184px;
-    margin: auto;
-    margin-top: 80px
-}
-
-.text_section h1 {
-    font-size: 32px;
-    padding-bottom: 40px;
-}
-
-.text_section p {
-    text-align: center;
-    line-height: 30px;
-}
-
-.icon_section {
-    display: flex;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    margin: auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    width: 1002px;
-    height: 193px;
+    justify-content: center;
+    margin: 20px 10px;
+    width: 200px;
 }
 
-.icon {
-    width:  70px;
-    height: 70px;
-    object-fit: cover;
-    align-items: center;
-    margin-left: 60px;
-    margin-bottom: 30px;
+.media-area h4{
+    margin: 10px 0;
+    color: var(--primary-text-color);
 }
 
-.icon_section h3 {
-    font-size: 18px;
+.media-area img {
+    width: 20%;
+}
+
+.media-area p {
     text-align: center;
-    margin-bottom: 20px;
+    color: var(--primary-text-color);
 }
 
-.icon_section p {
-    font-size: 14px;
-    text-align: center;
+/* MEDIA QUERIES FOR THE WHAT WE DO SECTION */
+/* max-width 768 */
+@media (max-width: 768px) {
+
+    .textarea-wwd{
+        width: 502px;
+        margin: 0 auto;
+    }
+
+    .media-area {
+        flex-direction: column;
+    }   
+}
+
+
+@media (max-width: 480px) {
+
+    .textarea-wwd {
+        width: 325px;
+    }
+
+    .media-area {
+        flex-direction: column;
+    }
+
+    .top, .down {
+        flex-direction: column;
+    }
 }
