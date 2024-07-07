@@ -1,4 +1,4 @@
-My README
+
 This repository contains a project focused on creating a responsive web page for a headphones manufacturer, following a design specification provided by a UI/UX designer. The goal is to build a fully functional web page using only HTML and CSS, without external frameworks or JavaScript.
 
 The key requirements for this project include:
