@@ -1,203 +1,119 @@
-* {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+.our-results {
+    background-image: url("./assets/headphones_hero_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0;
 }
 
-/* This part is for the hero section it is saved under 1-style.css */
-
-.hero {
-    background: url(/headphones/images/background.png) no-repeat center center/cover;
-    height: 800px;
-    width: 100%;
+.textarea-results {
+    width: 637px;
+    margin: 0 auto;
+    /* padding: 40px 0; */
 }
 
-header {
+.textarea-results h1, .textarea-results p{
+    text-align: center;
+    color: var(--white);
+}
+
+.textarea-results h1 {
+    font-size: 32px;
+    font-weight: 600px;
+}
+
+.textarea-results p {
+    margin: 30px 0;
+}
+
+.container {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 200px;
-    padding-right: 200px;
-}
-
-.nav_links ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav_links ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-}
-
-.logo {
-    width: 161px;
-    height: 32px;
-}
-
-button {
-    background-color: #FF6565;
-    border: none;
-    padding: 10px;
-    border-radius: 30px;
-    color: white;
-    font-size: 14px;
-    width: 162px;
-    height: 44px;
-    font-weight: bold;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 40px;
-    margin-bottom: 80px;
 }
 
-.hero_section {
-    width: 637px;
-    height: 313px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    margin: auto;
-    margin-top: 350px;
-    margin-bottom: 50px;
+@keyframes pulsate {
+    100% {
+        transform: scale(100%);
+        /* transform: translateX(0px); */
+    }
 
+    50% {
+        transform: scale(90%);
+        /* transform: translateX(-10px); */
+    }
 }
 
-.hero_section p {
-    text-align: center;
-}
-
-.hero_section h3 {
-    font-size: 16px;
-}
-
-.hero_section h1 {
-    font-size: 32px;
-}
-
-/* This part is for the "What we do" section */
-
-.what_we_do {
-    height: 600px;
-}
-
-.text_section {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 637px;
-    height: 184px;
-    margin: auto;
-    margin-top: 80px
-}
-
-.text_section h1 {
-    font-size: 32px;
-    padding-bottom: 40px;
-}
-
-.text_section p {
-    text-align: center;
-    line-height: 30px;
-}
-
-.icon_section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    margin: auto;
-    margin-top: 100px;
-    width: 1002px;
-    height: 193px;
-}
-
-.icon {
-    width:  100px;
-    height: 100px;
-    object-fit: cover;
-    align-items: center;
-    margin-left: 60px;
-    margin-bottom: 30px;
-}
-
-.icon_section h3 {
-    font-size: 18px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.icon_section p {
-    font-size: 14px;
-    text-align: center;
-}
-
-/* This part is for "OUR RESULTS" section */
-
-.our_results {
-    background: url(/headphones/images/back2.png) no-repeat center center/cover;
-    height: 650px;
-    width: 100%;
-}
-
-.text2_section{
-    width: 637px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: white;
-    margin: auto;
-}
-
-.text2_section h1 {
-    font-size: 32px;
-    padding-bottom: 40px;
-    padding-top: 180px;
-}
-
-.text2_section p {
-    text-align: center;
-    line-height: 30px;
-}
-
-.penta_img {
-    height: 190px;
-    width: 190px;
-}
-
-.pentagone {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    margin: auto;
-    margin-top: 200px;
-    width: 1002px;
-    height: 193px;
-    color: white;
+.item {
     position: relative;
+    margin: 0 10px;
+    animation-name: pulsate;
+    animation-duration: 3s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
 }
 
- .pentagone h1 {
-    font-size: 46px;
- }
+.item img {
+    width: 170px;
+    height: 170px;
+}
 
- .pentagone p {
-    font-size: 10px;
- }
-
-
-.pentagone_shape {
-    position: relative;
-  }
-  
-  .pentatxt {
+.item h4, .item p {
     position: absolute;
-    bottom: 60px;
-    right: 40px;
-    padding-left: 40px;
-    padding-right: 10px;
-  }
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+.item h4 {
+    color: var(--white);
+    font-size: 64px;
+    top: 80px;
+    left: 80px;
+}
+
+.item p {
+    color: var(--white);
+    font-size: 16px;
+    top: 120px;
+    left: 82px;
+}
+
+@media (max-width: 768px) {
+
+    .textarea-results {
+        width: 502px;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .item {
+        width: 35%;
+        margin: 20px 10px;
+        left: 3%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .textarea-results {
+        width: 305px;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item {
+        left: -20px;
+    }
+
+    .item p{
+        width: 90px;
+    }
+}
